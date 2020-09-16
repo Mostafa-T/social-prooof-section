@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+/* 
+
+  =====================
+    CSS INDEX
+  =====================
+
+    -- Global style
+    -- Social Proof Component
+    -- Media Queries
+    -- Custom Farmework
+
+*/
+
+
+/* Start Global style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../images/bg-pattern-bottom-desktop.svg'), url('../images/bg-pattern-top-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: right 100px, left top;
+  background-size: initial, 100%;
+
+  font-family: 'Spartan', sans-serif;
+  font-size: 1rem;
+}
+
+
+p {
+  font-weight: 400;
+}
+/* End Global style */
+
+/* Start Social Proof Component */
+.heading {
+  display: flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading__left {
+  flex: 0 0 40%;
+}
+
+.heading__left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+
+.heading__left p {
+  margin-top: .5rem;
+  font-weight: 500;
+  color: hsl(303, 10%, 53%);
+  line-height: 1.5;
+  font-size: .9rem;
+}
+
+.heading__right {
+  flex: 0 0 50%;
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  margin: 1rem;
+  background-color:hsl(300, 24%, 96%);
+  border-radius: 10px;
+  color: hsl(300, 43%, 22%);
+}
+
+.card__one {
+  align-self: flex-start;
+}
+.card__two{
+  align-self: center;
+}
+.card__three {
+  align-self: flex-end;
+}
+
+.starts {
+  list-style: none;
+  display: flex;
+  margin-right: 1rem;
+}
+
+.starts > li {
+  margin-right: 5px;
+}
+
+.reviews {
+  height: 250px;
+  display: flex;
+  flex-direction:row;
+  margin: 2rem 0rem;
+}
+.review__card {
+  float: 0 0 33.333%;
+  background-color: hsl(300, 43%, 22%);
+  border-radius:10px;
+  padding: 2rem;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+}
+
+.card__author img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.author {
+  margin-left: 1.35rem;
+}
+
+.author span {
+  font-size: .8rem;
+  color: hsl(333, 80%, 67%);
+  font-weight: 500;
+}
+
+.review__card p {
+  margin-top: 1.5rem;
+  line-height: 1.25;
+  font-size: .9rem;
+}
+
+.review-top {
+  align-self: flex-start;
+}
+
+.review-center {
+  align-self: center;
+}
+.review-bottom {
+  align-self: flex-end;
+}
+
+/* End Social Proof Component */
+
+
+/* Start Media Queries */
+
+@media (max-width: 768px) {
+
+  body {
+    background-image: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+  }
+
+  .heading {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading__right {
+    align-self: unset;
+  }
+
+  .card__one, .card__two, .card__three {
+    align-self: unset;
+  }
+
+  .reviews{
+    flex-direction: column;
+  }
+  .review__card {
+    margin-bottom: 1rem;
+  }
+
+  .review__card {
+    margin-right: 0;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .heading__left {
+    text-align: center;
+  }
+  .heading__left h1 {
+    font-size: 2rem;
+  }
+  .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+  }
+  .card .starts {
+    margin-bottom: 10px;
+  }
+}
+
+/* End Media Queries */
+
+
+/* Start Custom Farmework */
+.container {
+  min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0px 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* End Custom Farmework */
+
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
